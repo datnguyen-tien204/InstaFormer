@@ -5,8 +5,8 @@ Train:
   seed: 42
   start_epoch: 0 # if resume, set this as a number
   end_epoch: 5
-  batch_size: 5
-  num_workers: 5 # # threads for loading data
+  batch_size: 1
+  num_workers: 8 # # threads for loading data
   lr: 2e-4 # initial learning rate for adam
   beta1: 0.5 # momentum term of adam
   beta2: 0.999 # momentum term of adam
