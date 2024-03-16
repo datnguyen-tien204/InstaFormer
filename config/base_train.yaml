@@ -1,10 +1,10 @@
 Train: 
   model_name: 'Instaformer_init' # name of the experiment. It decides where to store samples and models
   log_path: './weights' # path of weights
-  use_cuda: True
+  use_cuda: False
   seed: 42
   start_epoch: 0 # if resume, set this as a number
-  end_epoch: 1
+  end_epoch: 5
   batch_size: 5
   num_workers: 5 # # threads for loading data
   lr: 2e-4 # initial learning rate for adam
@@ -31,12 +31,12 @@ Train:
 
   data:
     dataset: 'init'
-    dir_A: # path of dataset_A
-    dir_B: # path of dataset_B
+    dir_A: 'E:\NLP\InstaFormer\dataset\train' # path of dataset_A
+    dir_B: 'E:\NLP\InstaFormer\dataset\test' # path of dataset_B
     height: 352 # scale images to this size
     width: 352 # scale images to this size
     num_box: 20 # # box
-    max_dataset_size: 20000 # Maximum number of samples allowed per dataset. If the dataset directory contains more than max_dataset_size, only a subset is loaded.
+    max_dataset_size: 2500 # Maximum number of samples allowed per dataset. If the dataset directory contains more than max_dataset_size, only a subset is loaded.
 
   visualize:
     display_winsize: 256 # visdom display size
@@ -45,7 +45,7 @@ Train:
     display_id: -1 # window id of the web display.
     display_server: "http://localhost" # visdom server of the web display
     display_env:  'main' # visdom display environment name (default is "main")
-    display_port: 8098 # visdom port of the web display
+    display_port: 8097 # visdom port of the web display
     update_html_freq: 1000 # frequency of saving training results to html
     print_freq: 100 # frequency of showing training results on console
     no_html: False # do not save intermediate training results to [opt.checkpoints_dir]/[opt.name]/web/

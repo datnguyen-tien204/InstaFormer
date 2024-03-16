@@ -107,6 +107,7 @@ def data_loader(data_cfg, batch_size, num_workers, train_mode):
                     "img2ir": data.Img2IR_Dataset}
 
     selected_dataset = datasets_dict[data_cfg.dataset]
+    print("selected_dataset",selected_dataset)
 
     dataset = selected_dataset(data_cfg,train_mode)
     data_loader = DataLoader(dataset, batch_size, True,num_workers=num_workers, pin_memory=True, drop_last=True)
