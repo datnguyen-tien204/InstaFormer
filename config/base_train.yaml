@@ -32,7 +32,7 @@ Train:
   data:
     dataset: 'init'
     dir_A: '/kaggle/working/InstaFormer/dataset/InstaFormerDataset/train' # path of dataset_A
-    dir_B: '/kaggle/working/InstaFormer/dataset/InstaFormerDataset/test_img' # path of dataset_B
+    dir_B: '/kaggle/working/InstaFormer/dataset/InstaFormerDataset/test' # path of dataset_B
     height: 352 # scale images to this size
     width: 352 # scale images to this size
     num_box: 20 # # box
